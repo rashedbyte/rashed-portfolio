@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sparkles, MapPin, ArrowRight, GraduationCap, Cpu, BarChart3, Code2, CheckCircle2 } from 'lucide-react';
+import { MapPin, ArrowRight, GraduationCap, Cpu, BarChart3, Code2 } from 'lucide-react';
 import { aboutData, type StatItem } from '../../data/about';
 
 // --- Custom Animated Doughnut Stat Card Component ---
@@ -44,7 +44,7 @@ const NeonStatCard = ({
       ref={ref}
       variants={{
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
       }}
       className={`relative p-6 rounded-3xl bg-white dark:bg-[#121320]/80 border border-gray-200 dark:border-purple-500/20 backdrop-blur-xl flex flex-col items-center justify-center text-center group shadow-sm dark:shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:border-purple-400 dark:hover:border-purple-500/40 transition-all duration-500 ${glowClass}`}
     >
@@ -69,7 +69,7 @@ const NeonStatCard = ({
             strokeDasharray={circumference}
             initial={{ strokeDashoffset: circumference }}
             animate={isInView ? { strokeDashoffset: circumference - (percentage / 100) * circumference } : { strokeDashoffset: circumference }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" as const }}
             style={{
               filter: `drop-shadow(0px 0px 6px ${strokeColor})`
             }}
@@ -90,7 +90,7 @@ const NeonStatCard = ({
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 const staggerContainer = {
@@ -169,7 +169,7 @@ const About = () => {
             className="lg:col-span-5"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" as const }}
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 rounded-3xl blur-lg opacity-20 dark:opacity-30 group-hover:opacity-50 transition duration-500"></div>

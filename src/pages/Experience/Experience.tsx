@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, GraduationCap, Calendar, MapPin, ChevronRight, ExternalLink } from 'lucide-react';
 import { journeyData, type JourneyType } from '../../data/experiences';

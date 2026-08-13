@@ -44,14 +44,11 @@ const GithubIcon = ({ className }: { className: string }) => (
 const ExternalLinkIcon = ({ className }: { className: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
 );
-const LayoutGridIcon = ({ className }: { className: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-);
 
 // ==========================================
 // 3. Project Card Component
 // ==========================================
-const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+const ProjectCard: React.FC<{ project: Project}> = ({ project}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -264,11 +261,10 @@ const Projects = () => {
         <AnimatePresence mode="popLayout">
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project: any, index: number) => (
+              {filteredProjects.map((project: any) => (
                 <ProjectCard 
-                  key={project.title || index} 
+                  key={project.title} 
                   project={project} 
-                  index={index} 
                 />
               ))}
             </div>

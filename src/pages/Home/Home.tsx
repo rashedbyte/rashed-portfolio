@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../../components/Hero/Hero'; // আপনার Hero ফাইল পাথ
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';

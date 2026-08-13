@@ -114,7 +114,7 @@ const Resume: React.FC = () => {
               profileData={profileData}
               aboutData={aboutData}
               journeyData={journeyData}
-              projectsData={[projects]}
+              projectsData={projects}
             />
           }
           fileName={`Resume_${aboutData.personalInfo.name.replace(

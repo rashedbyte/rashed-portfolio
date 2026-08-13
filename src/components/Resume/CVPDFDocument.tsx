@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Document,
   Page,
@@ -21,6 +20,7 @@ interface CVPDFDocumentProps {
   profileData: any;
   aboutData: any;
   journeyData: any[];
+  projectsData: typeof projects;
 }
 
 // ============================================================
