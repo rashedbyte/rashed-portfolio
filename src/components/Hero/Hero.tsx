@@ -85,8 +85,7 @@ const MultiRoleTypewriter = ({ roles }: { roles: any }) => {
 const Hero = () => {
   // profile.ts থেকে roles, role বা fallback ডাটা নেওয়া
   const rolesData = (profileData as any).roles || (profileData as any).role || ["Software Developer"];
-  const userPhoto = (profileData as any).avatarUrl || (profileData as any).photoUrl || "https://via.placeholder.com/400x400";
-
+  const userPhoto = profileData.avatarUrl;
   return (
     <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 transition-colors duration-300">
       

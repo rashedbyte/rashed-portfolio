@@ -1,3 +1,4 @@
+import profilePhoto from '../assets/images/rashed.png' ; 
 export const profileData = {
   name: "Md Rashed Ali", // আপনার নাম দিন
   role: [
@@ -11,7 +12,7 @@ export const profileData = {
   shortIntro: "I engineer intelligent systems and extract meaningful insights from complex data. Specialized in building scalable AI solutions and modern web applications.",
   status: "Available for Opportunities",
   location: "Bangladesh",
-  avatarUrl: "rashed.png",
+  avatarUrl: profilePhoto,
   email: "rashed.byte@gmail.com", // আপনার ইমেইল দিন
   phone:+8801577064046,
   socials: {
