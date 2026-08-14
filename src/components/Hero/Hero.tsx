@@ -99,7 +99,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="lg:col-span-7 space-y-6 text-center lg:text-left z-10"
+          className="order-2 lg:order-1 lg:col-span-7 space-y-6 text-center lg:text-left z-10"
         >
           {/* Status Badge */}
           {profileData.status && (
@@ -173,7 +173,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="lg:col-span-5 relative flex justify-center z-10"
+          className="order-1 lg:order-2 lg:col-span-5 relative flex justify-center z-10"
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
             <div className="absolute inset-0 rounded-full border-[3px] border-purple-500/30 dark:border-purple-500/40 animate-[spin_12s_linear_infinite]"></div>

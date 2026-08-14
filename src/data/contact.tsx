@@ -30,9 +30,9 @@ export interface ContactConfig {
 // =========================================================
 
 export const contactConfig: ContactConfig = {
-  email: 'rashed@example.com',
+  email: 'rashed.byte@gmail.com',
 
-  phone: '',
+  phone: '+8801577064046',
   location: 'Bangladesh',
   timezone: 'GMT+6 (Bangladesh Standard Time)',
 
@@ -69,8 +69,8 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    url: 'https://github.com',
-    username: '@rashed',
+    url: 'https://github.com/rashedbyte/',
+    username: '@rashedbyte',
     description:
       'Explore my open-source projects, experiments, source code, and development work.',
     iconName: 'Github',
@@ -94,7 +94,7 @@ export const socialLinks: SocialLink[] = [
 
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com',
+    url: 'https://linkedin.com/rashedbyte',
     username: 'in/rashed',
     description:
       'Connect with me professionally, explore my experience, and follow my career journey.',
@@ -115,7 +115,7 @@ export const socialLinks: SocialLink[] = [
 
   {
     name: 'X (Twitter)',
-    url: 'https://twitter.com',
+    url: 'https://twitter.com/rashedbyte',
     username: '@rashed',
     description:
       'Follow me for technical thoughts, projects, learning updates, and development content.',
@@ -136,8 +136,8 @@ export const socialLinks: SocialLink[] = [
 
   {
     name: 'Facebook',
-    url: 'https://facebook.com',
-    username: '@rashed',
+    url: 'https://www.facebook.com/Rashed.FB5',
+    username: '@Rashed.FB5',
     description:
       'Connect with me and stay updated with my latest activities and projects.',
     iconName: 'Facebook',
@@ -154,6 +154,7 @@ export const socialLinks: SocialLink[] = [
       </svg>
     ),
   },
+  
 ];
 
 // =========================================================
