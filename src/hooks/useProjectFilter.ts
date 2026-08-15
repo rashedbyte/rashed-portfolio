@@ -1,13 +1,13 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-export type SortOption = 'featured' | 'newest' | 'a-z' | 'z-a';
+export type SortOption = 'featured' | 'newest' | 'oldest' | 'a-z' | 'z-a';
 
 export const useProjectFilter = (projects: any[]) => {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
-  // ট্যাগগুলোকে এখন Array হিসেবে রাখছি যাতে একাধিক সিলেক্ট করা যায়
+  // ট্যাগগুলোকে এখন Array হিসেবে রাখছি যাতে একাধিক সিলেক্ট করা যায়
   const [activeTags, setActiveTags] = useState<string[]>(
     searchParams.get('tags') ? searchParams.get('tags')!.split(',') : []
   );
@@ -61,11 +61,24 @@ export const useProjectFilter = (projects: any[]) => {
       .sort((a, b) => b.score - a.score)
       .map(item => item.project);
     } 
-    // Sorting (সার্চ না থাকলে ম্যানুয়াল সর্টিং কাজ করবে)
+    // Sorting (সার্চ না থাকলে ম্যানুয়াল সর্টিং কাজ করবে)
     else {
       result = [...result].sort((a, b) => {
+        // আপনার ডেটার 'year' প্রপার্টি ব্যবহার করে সর্টিং
+        if (sortOption === 'newest') {
+           const yearA = parseInt(a.year) || 0;
+           const yearB = parseInt(b.year) || 0;
+           return yearB - yearA; // বড় সাল (নতুন) আগে আসবে
+        }
+        if (sortOption === 'oldest') {
+           const yearA = parseInt(a.year) || 0;
+           const yearB = parseInt(b.year) || 0;
+           return yearA - yearB; // ছোট সাল (পুরোনো) আগে আসবে
+        }
+        
         if (sortOption === 'a-z') return (a.title || '').localeCompare(b.title || '');
         if (sortOption === 'z-a') return (b.title || '').localeCompare(a.title || '');
+        
         // Default: Featured first
         return (b.featured === true ? 1 : 0) - (a.featured === true ? 1 : 0);
       });

@@ -28,7 +28,14 @@ interface Suggestion {
   type: 'Project' | 'Category' | 'Technology';
 }
 
-const sortOptions = ['Featured', 'Newest', 'Oldest', 'A-Z', 'Z-A'];
+// অপশনগুলোকে অবজেক্ট আকারে সাজানো হলো
+const sortOptions = [
+  { label: 'Featured', value: 'featured' },
+  { label: 'Newest', value: 'newest' },
+  { label: 'Oldest', value: 'oldest' },
+  { label: 'A-Z', value: 'a-z' },
+  { label: 'Z-A', value: 'z-a' }
+];
 
 // ==========================================
 // Main Component
@@ -283,7 +290,8 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
           >
             <div className="flex items-center gap-2">
               <SlidersHorizontal className="w-4 h-4 text-gray-400" />
-              <span>{sortOption || 'Sort by'}</span>
+              {/* অ্যাকটিভ অপশনের লেবেলটি দেখানোর জন্য */}
+              <span>{sortOptions.find(opt => opt.value === sortOption)?.label || 'Sort by'}</span>
             </div>
             <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${isSortOpen ? 'rotate-180' : ''}`} />
           </button>
@@ -300,17 +308,17 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
                 <div className="py-2">
                   {sortOptions.map((option) => (
                     <button
-                      key={option}
+                      key={option.value}
                       onClick={() => {
-                        setSortOption(option);
+                        setSortOption(option.value); // সঠিক value টি হুকে পাঠানো হচ্ছে
                         setIsSortOpen(false);
                       }}
                       className="w-full text-left px-4 py-2.5 text-sm flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
                     >
-                      <span className={sortOption === option ? 'text-purple-600 dark:text-purple-400 font-medium' : 'text-gray-700 dark:text-gray-300'}>
-                        {option}
+                      <span className={sortOption === option.value ? 'text-purple-600 dark:text-purple-400 font-medium' : 'text-gray-700 dark:text-gray-300'}>
+                        {option.label}
                       </span>
-                      {sortOption === option && <Check className="w-4 h-4 text-purple-600 dark:text-purple-400" />}
+                      {sortOption === option.value && <Check className="w-4 h-4 text-purple-600 dark:text-purple-400" />}
                     </button>
                   ))}
                 </div>

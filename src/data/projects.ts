@@ -149,7 +149,7 @@ export const projects = [
 
     category: 'Machine Learning',
     featured: true,
-    year: '2026',
+    year: '2025',
 
     longDescription:
       'This project focuses on developing a Machine Learning system capable of identifying potentially fraudulent credit card transactions from historical transaction data. Fraud detection is a challenging classification problem because fraudulent transactions usually represent only a very small portion of the total dataset. The project therefore begins with detailed exploratory analysis of transaction amount distributions, temporal patterns, transaction frequencies, and other behavioral indicators. Data preprocessing includes scaling, feature transformation, missing-value handling, and analysis of class imbalance. Several classification algorithms are evaluated, including Logistic Regression, Random Forest, Gradient Boosting, and XGBoost. Instead of relying on accuracy alone, the system focuses heavily on precision, recall, F1-score, ROC-AUC, and precision-recall curves because missing fraudulent transactions can be much more costly than flagging a small number of legitimate transactions. Probability threshold optimization is used to find a practical balance between fraud detection and false alarms. The final model can be exposed through an interactive interface where transaction information is analyzed and a fraud risk score is generated.',
@@ -195,7 +195,7 @@ export const projects = [
 
     category: 'Artificial Intelligence',
     featured: false,
-    year: '2026',
+    year: '2024',
 
     longDescription:
       'This project implements an intelligent movie recommendation engine designed to help users discover films that are similar to movies they already enjoy. Instead of relying solely on user ratings, the system uses a content-based recommendation approach built from movie metadata such as genres, keywords, cast, crew, descriptions, and other textual attributes. The data preparation stage combines multiple fields into a consolidated representation of each movie. Natural Language Processing techniques are then applied to clean, normalize, and transform this information into machine-readable vectors. TF-IDF and cosine similarity are used to measure relationships between movies and generate ranked recommendations. Additional filtering and ranking logic is used to avoid irrelevant results and improve recommendation quality. The final application allows a user to search for a movie, select it, and instantly receive a list of similar titles. The system demonstrates how text processing, vectorization, similarity analysis, and recommendation logic can be combined to create a practical AI-powered user experience.',
@@ -287,7 +287,7 @@ export const projects = [
 
     category: 'Natural Language Processing',
     featured: true,
-    year: '2026',
+    year: '2023',
 
     longDescription:
       'This project is an end-to-end Natural Language Processing system designed to understand the sentiment expressed in written text. The application can analyze customer reviews, product feedback, social media comments, and other forms of unstructured text and classify them into sentiment categories. The processing pipeline begins by cleaning raw text, handling punctuation, removing unnecessary noise, normalizing words, and preparing the content for machine learning. Tokenization and text representation techniques such as TF-IDF convert the textual information into numerical features that classification algorithms can process. Several models can be compared to determine which approach provides the best trade-off between accuracy, precision, recall, and inference speed. The final application provides an interactive interface where users can enter a sentence or review and instantly receive a predicted sentiment. The system can also be extended to support batch analysis, sentiment distribution charts, and customer feedback dashboards. This project demonstrates the practical application of NLP, supervised learning, feature engineering, and interactive model deployment.',
@@ -333,7 +333,7 @@ export const projects = [
 
     category: 'Data Analytics',
     featured: false,
-    year: '2026',
+    year: '2025',
 
     longDescription:
       'This project is an interactive financial analytics dashboard created to transform historical stock market data into meaningful visual insights. The application allows users to analyze price movements across customizable time periods and explore important market indicators such as opening price, closing price, daily range, trading volume, moving averages, and volatility. The data pipeline handles date normalization, missing market days, duplicate records, and numerical transformations before generating analytical features. Interactive charts are used to display long-term price trends, short-term movements, volume changes, and relationships between technical indicators. Users can compare different stocks, inspect specific date ranges, and identify periods of unusually high market activity. The dashboard is designed primarily as an analytical and educational tool rather than an automated trading system. Its main goal is to demonstrate how Python-based data processing, time-series analysis, interactive visualization, and financial metrics can be combined to build a practical data analytics product.',
@@ -379,7 +379,7 @@ export const projects = [
 
     category: 'Computer Vision',
     featured: false,
-    year: '2026',
+    year: '2023',
 
     longDescription:
       'This project combines Computer Vision and Deep Learning to build a real-time face mask detection application. The system is designed to identify human faces from images or video streams and classify whether a person is wearing a mask. The workflow begins with image preprocessing and dataset preparation, followed by augmentation techniques to improve model robustness against different lighting conditions, facial orientations, and image quality. A Convolutional Neural Network is trained to distinguish between masked and unmasked faces, while OpenCV handles real-time frame processing and visualization. During inference, detected faces are analyzed individually and the predicted class is displayed using visual overlays. The application demonstrates how deep learning models can be integrated with traditional computer vision tools to create a real-time AI solution. The system can potentially be extended to multiple-person detection, confidence score display, alert mechanisms, and edge-device deployment. The project serves as a practical example of image classification, CNN training, OpenCV processing, and real-time model inference.',
@@ -425,7 +425,7 @@ export const projects = [
 
     category: 'Artificial Intelligence',
     featured: true,
-    year: '2026',
+    year: '2022',
 
     longDescription:
       'This project focuses on automating the initial stage of recruitment by using Natural Language Processing and Machine Learning to analyze resumes and compare them against job requirements. Traditional resume screening can require significant manual effort, especially when recruiters receive hundreds of applications for a single position. The system addresses this problem by extracting structured information from unstructured resume documents, including candidate names, technical skills, educational qualifications, work experience, certifications, and relevant keywords. Resume content is cleaned and normalized before being analyzed using NLP techniques. Job descriptions are processed using a similar pipeline so that the system can calculate how closely each candidate matches the required skills and qualifications. A relevance scoring mechanism is then used to rank candidates and highlight the strongest matches. The application can also provide skill-gap information, showing which required technologies or qualifications are missing from a candidate profile. The overall goal is not to replace recruiters but to provide an intelligent first-pass screening assistant that reduces repetitive manual work and allows human decision-makers to focus more on interviews, candidate quality, and final evaluation.',
