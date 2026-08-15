@@ -244,6 +244,8 @@ const Projects = () => {
 
       {/* Updated Component Props */}
       <ProjectFilter
+        projects={projects} // 👈 এই লাইনটি যোগ করুন (সাজেশনের জন্য)
+        totalProjects={projects.length} // 👈 এই লাইনটি যোগ করুন (সামারির জন্য)
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         activeTags={activeTags}
